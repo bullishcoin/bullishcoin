@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Bullishcoin
+Comment=Bullishcoin P2P Cryptocurrency
+Comment[fr]=Bullishcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Bullishcoin, eşten eşe kriptografik sanal para birimi
+Exec=bullishcoin-qt %u
+Terminal=false
+Type=Application
+Icon=bullishcoin128
+MimeType=x-scheme-handler/bullishcoin;
+Categories=Office;Finance;

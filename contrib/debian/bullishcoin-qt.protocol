@@ -1,0 +1,11 @@
+[Protocol]
+exec=bullishcoin-qt '%u'
+protocol=bullishcoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

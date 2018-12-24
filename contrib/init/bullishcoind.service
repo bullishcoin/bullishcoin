@@ -1,0 +1,26 @@
+[Unit]
+Description=Bullishcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=bullishcoin
+Group=bullishcoin
+
+Type=forking
+PIDFile=/var/lib/bullishcoind/bullishcoind.pid
+
+ExecStart=/usr/bin/bullishcoind -daemon -pid=/var/lib/bullishcoind/bullishcoind.pid \
+          -conf=/etc/bullishcoin/bullishcoin.conf -datadir=/var/lib/bullishcoind
+
+ExecStop=-/usr/bin/bullishcoin-cli -conf=/etc/bullishcoin/bullishcoin.conf \
+         -datadir=/var/lib/bullishcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
